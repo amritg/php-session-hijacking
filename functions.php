@@ -5,5 +5,9 @@
         }else{
             return false;
         }
+    }
+    function incrementByFive($num){
+        $newNum = $num + 5;
+        return $newNum;
     } 
 ?>

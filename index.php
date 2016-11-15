@@ -1,6 +1,5 @@
 <?php 
 	session_start();
-
 	if (isset($_SESSION["userName"])) {
     	unset($_SESSION["userName"]);
     	unset($_SESSION['message']);
@@ -36,7 +35,7 @@
 			?>
 			</div>
 			<div id="signup-tab-content">
-				<form class="signup-form" action="register.php" method="post">
+				<form class="signup-form" action="sign-up-script.php" method="post">
 					<input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email" name="email" required>
 					<input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username" name="userName" required>
 					<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password" name="password" required>
@@ -49,7 +48,7 @@
 			</div><!--.signup-tab-content-->
 
 			<div id="login-tab-content" class="active">
-				<form class="login-form" action="login.php" method="post">
+				<form class="login-form" action="login-script.php" method="post">
 					<input type="text" class="input" id="user_login" autocomplete="off" placeholder="Username" name="userName">
 					<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password" name="password">
 					<input type="submit" class="button" name= "logIn" value="Login">

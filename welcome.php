@@ -56,7 +56,7 @@
             <li><a href="">Nav item 5</a></li>
           </ul>
           <ul class="nav nav-sidebar logout">
-            <li><a href="logout.php">Logout</a></li>
+            <li><a href="logout-script.php">Logout</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
