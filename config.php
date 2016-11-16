@@ -2,7 +2,7 @@
 	$serverName = "localhost";
 	$userName  = "amritg";
 	$password = "root";
-	$dbName = "injection";
+	$dbName = "session-hijacking";
 	$conn = mysqli_connect($serverName, $userName, $password, $dbName);
 
 	$message = '';
