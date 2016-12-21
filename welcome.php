@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require('config.php');
+    require ("config.php");
     require ("functions.php");
     if(!checkLoggedInUser()){
         header("Location:index.php");
@@ -73,7 +73,6 @@
                 $result = mysqli_query($conn,$totalUsersQuery);
                 while($totalUsers = mysqli_fetch_assoc($result)){
             ?> 
-                    <!--echo $totalUsers['name']."<br>";-->
                     <div class="col-xs-6 col-sm-3 placeholder">
                     <div class="imageCircle"></div>
                     <h4><?php echo $totalUsers['name'] ?></h4>
