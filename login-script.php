@@ -1,6 +1,6 @@
 <?php
     require("config.php");
-    require("preActivateSessions.php");
+    require("preActivateSessions_1.php");
 
     if(isset($_POST["logIn"]) && !empty($_POST["logIn"])){
 
