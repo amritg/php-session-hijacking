@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/dashboard.css">
 </head>
 <body>
+    
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -68,7 +69,7 @@
           <h1 class="page-header">Dashboard</h1>
           <h3 class="page-topic">Fellow Students Enrolled</h3>
           <div class="row placeholders">
-            <?php 
+            <?php
                 $totalUsersQuery = "SELECT * FROM users";
                 $result = mysqli_query($conn,$totalUsersQuery);
                 while($totalUsers = mysqli_fetch_assoc($result)){

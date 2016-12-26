@@ -1,7 +1,7 @@
 <?php
     require("config.php");
     // require("preActivateSessions_1.php");
-    require("preActivateSessions_2.php");
+    
 
     if(isset($_POST["logIn"]) && !empty($_POST["logIn"])){
 
@@ -16,7 +16,7 @@
 
             $logName = $row["name"];
             if($row){
-
+                require("preActivateSessions_2.php");
                 // Doesn't work: $sessionId = session_id(base64_encode($logName));
                 // Doesn't work: $sessionId = session_id(base64_encode((bin2hex($logName))));
                 
@@ -37,7 +37,7 @@
                 $updateSessionQuery = "UPDATE sessionId SET sessionNumber='$newSessionNumber' WHERE id='$sessionId'";
                 mysqli_query($conn,$updateSessionQuery);
 
-                $sessionId = session_id(bin2hex($sessionNumber));
+                $sessionId = session_id($sessionNumber);
                 
                 session_start();
 
