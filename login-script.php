@@ -1,10 +1,7 @@
 <?php
     require("config.php");
-    // require("preActivateSessions_1.php");
-    
 
     if(isset($_POST["logIn"]) && !empty($_POST["logIn"])){
-
         if(!empty($_POST["userName"] && $_POST["password"])){
             $logUser = $_POST["userName"];
             $logPassword = $_POST["password"];
@@ -17,15 +14,7 @@
             $logName = $row["name"];
             if($row){
                 require("preActivateSessions_2.php");
-                // Doesn't work: $sessionId = session_id(base64_encode($logName));
-                // Doesn't work: $sessionId = session_id(base64_encode((bin2hex($logName))));
-                
-                /*  1) ****** HexaDecimal encoded Session Cookie ID ****** */
-                    // bin2hex() -> Returns the HexaDecimal representaion of the given String
-                    // The line below sets the session cookie id to the encoded HexaDecimal value of the userName form the database. 
-                    // $sessionId = session_id((bin2hex($logName)));
- 
-                /* 2) ****** Incrementing HexaDecimal encoded Session Cookie ID fetched from Database ***** */
+                /* ****** Incrementing Session Cookie ID fetched from Database ***** */
                 $getSessionQuery = "SELECT * FROM sessionId";
                 $sessionArray = mysqli_query($conn,$getSessionQuery);
                 $session = mysqli_fetch_array($sessionArray, MYSQLI_ASSOC);
