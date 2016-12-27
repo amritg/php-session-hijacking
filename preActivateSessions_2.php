@@ -46,7 +46,7 @@
                 session_write_close();
                 if($userName == $sessionVariable){
                     // echo $sessionVariable ." is present in the current session.<br>";
-                    return true;
+                    return $pSession;
                 }else{
                     // echo $sessionVariable." is absent in this session.<br>";
                 }
